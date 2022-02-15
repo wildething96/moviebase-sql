@@ -14,7 +14,7 @@ const Film = sequelize.define("Netflix",{
       rating: {
         type: DataTypes.INTEGER,
       },
-      Year: {
+      year: {
         type: DataTypes.DATE,
       },
 })

@@ -20,3 +20,20 @@ exports.list = async () => {
     console.log(error);
   }
 };
+
+exports.updateFilm = async (filmObj, oldRecord) => {
+  try {
+    await Film.sync()
+    await Film.update(filmObj, {where: oldRecord})
+  } catch (error) {
+    
+  }
+}
+
+exports.deleteFilm = async (oldRecord) => {
+  try {
+    await Film.destroy({where: oldRecord})
+  } catch (error) {
+    console.log(error);
+  }
+}
